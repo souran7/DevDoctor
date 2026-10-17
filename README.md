@@ -38,7 +38,7 @@ devdoctor scan
 ```text
 $ devdoctor scan
 
-DevDoctor 0.1.0
+DevDoctor 0.1.1
 Project: Django + PostgreSQL + Docker
 ────────────────────────────
 
@@ -101,7 +101,8 @@ Run with `--verbose` to view the comprehensive breakdown:
 ```text
 $ devdoctor scan --verbose
 
-❌ Pydantic installation problem
+DevDoctor 0.1.1 (Detailed Diagnostic Report)
+────────────────────────────────────────────────────────
 
 PROBLEM:
 Incompatible version of pydantic-core installed for Python runtime.

@@ -8,6 +8,8 @@ from typing import Optional
 
 from rich.console import Console
 
+from devdoctor._version import __version__
+
 # Ensure UTF-8 output on Windows terminals
 if sys.stdout and hasattr(sys.stdout, "reconfigure"):
     try:
@@ -51,7 +53,7 @@ class Reporter:
             return
 
         # Header
-        self.console.print("[bold cyan]DevDoctor 0.1.0[/bold cyan]")
+        self.console.print(f"[bold cyan]DevDoctor {__version__}[/bold cyan]")
         if report.project_info and report.project_info.summary_stack:
             self.console.print(f"[dim]Project: {report.project_info.summary_stack}[/dim]")
         self.console.print(f"{SYM_DIV}\n")
@@ -101,7 +103,7 @@ class Reporter:
 
     def _render_verbose(self, report: DiagnosticReport) -> None:
         """Render full diagnostic detail with WHY, EVIDENCE, SAFE FIX, COMMAND, and Confidence."""
-        self.console.print("[bold cyan]DevDoctor 0.1.0 (Detailed Diagnostic Report)[/bold cyan]")
+        self.console.print(f"[bold cyan]DevDoctor {__version__} (Detailed Diagnostic Report)[/bold cyan]")
         self.console.print(f"{SYM_DIV * 2}\n")
 
         if report.passed:

@@ -13,7 +13,7 @@ def test_cli_scan_json(tmp_path: Path, capsys):
     ret = main(["scan", str(tmp_path), "--json"])
     assert ret in (0, 1)
     captured = capsys.readouterr()
-    assert '"version": "0.1.0"' in captured.out
+    assert '"version": "0.1.1"' in captured.out
     assert '"score":' in captured.out
 
 

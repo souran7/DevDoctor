@@ -239,7 +239,7 @@ class DiagnosticReport:
 
     def to_dict(self) -> Dict[str, Any]:
         return {
-            "version": "0.1.0",
+            "version": "0.1.1",
             "timestamp": self.timestamp.isoformat(),
             "duration_ms": round(self.duration_ms, 2),
             "score": self.score,

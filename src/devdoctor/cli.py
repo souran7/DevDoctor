@@ -9,7 +9,7 @@ from typing import List, Optional
 
 from rich.console import Console
 
-from devdoctor import __version__
+from devdoctor._version import __version__
 from devdoctor.fixer import Fixer
 from devdoctor.project import detect_project
 from devdoctor.reporter import Reporter

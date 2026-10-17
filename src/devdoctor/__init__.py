@@ -1,5 +1,4 @@
-"""DevDoctor: Deterministic developer machine and project diagnostic doctor."""
-
+from devdoctor._version import __version__
 from devdoctor.api import DevDoctor
 from devdoctor.checks.base import Check, check, get_registered_checks, register_check
 from devdoctor.fixer import FixAction, FixPlan, FixResult, Fixer
@@ -14,8 +13,6 @@ from devdoctor.models import (
 from devdoctor.project import detect_project
 from devdoctor.reporter import Reporter
 from devdoctor.scanner import Scanner
-
-__version__ = "0.1.0"
 
 __all__ = [
     "DevDoctor",
